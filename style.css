@@ -1,0 +1,80 @@
+*{box-sizing:border-box}
+:root{--cream:#f7eee7;--cream2:#f2e2d7;--pink:#e6b6a5;--brown:#4b3931;--dark:#342823;--muted:#77665e;--line:#d8c2b6}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--brown);font-family:Montserrat,Arial,sans-serif;font-size:13px}
+a{text-decoration:none;color:inherit}
+.topbar{position:fixed;z-index:50;top:0;left:0;right:0;height:72px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 6vw;color:#fff;background:linear-gradient(rgba(35,23,19,.5),transparent);font-size:10px;letter-spacing:.12em}
+.logo{font-family:"Cormorant Garamond",serif;font-size:29px;font-style:italic;letter-spacing:.02em;white-space:nowrap}
+nav{display:flex;gap:27px}
+nav a{font-size:9px}
+.social-top{justify-self:end;display:flex;gap:18px;align-items:center}
+.social-top span{font-size:8px;letter-spacing:.05em}
+.hero{height:100vh;min-height:680px;position:relative;overflow:hidden;color:#fff}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(35,22,17,.62),rgba(35,22,17,.15) 60%,rgba(35,22,17,.2))}
+.hero-copy{position:absolute;left:10.5%;top:22%;z-index:2}
+.mini,.kicker{font-size:9px;letter-spacing:.28em}
+.hero h1{font-family:"Cormorant Garamond",serif;font-size:clamp(65px,7.7vw,112px);line-height:.79;font-weight:400;letter-spacing:.01em;margin:25px 0 25px}
+.hero h1 em{font-weight:400}
+.script-line{font-family:"Cormorant Garamond",serif;font-size:27px;font-style:italic;margin-bottom:28px}
+.pill{display:inline-flex;align-items:center;gap:14px;padding:12px 20px;background:#e9c0ad;border-radius:30px;font-size:9px;letter-spacing:.16em;color:var(--brown);border:1px solid transparent}
+.pill span{font-size:15px;line-height:0}
+.pill.light{background:#e8b9a6;color:#4b3931}
+.hero-note{position:absolute;right:7%;bottom:22%;z-index:2;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:20px;line-height:1.1;transform:rotate(-7deg)}
+.about{display:grid;grid-template-columns:1.15fr 1.15fr .8fr;gap:55px;padding:55px 9vw;background:var(--cream2);align-items:center}
+.about-image{height:310px;position:relative;overflow:hidden;background:#e6d4c8}
+.about-image:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(244,227,216,.2),transparent)}
+.about-image img{width:100%;height:100%;object-fit:cover;object-position:center 43%}
+.about-image span{position:absolute;z-index:2;right:10px;bottom:12px;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;transform:rotate(-8deg)}
+.about-text h2,.salon h2,.contact h2{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:43px;line-height:.95;margin:18px 0 22px}
+.about-text p,.salon-copy p,.contact p{color:var(--muted);line-height:1.8;max-width:450px;font-size:12px}
+.about-text .pill{margin-top:8px}
+.values{border-left:1px solid var(--line);padding-left:35px}
+.values>div{display:flex;gap:20px;align-items:center;margin:23px 0}
+.values b{font-family:"Cormorant Garamond",serif;font-size:30px;font-weight:400;width:28px;text-align:center}
+.values span{font-size:11px;line-height:1.4}
+.services{text-align:center;padding:55px 8vw 50px;background:#faf3ed}
+.services h2,.gallery h2{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:39px;margin:15px 0 30px}
+.service-row{display:flex;justify-content:space-between;max-width:900px;margin:auto}
+.service{display:flex;flex-direction:column;align-items:center;gap:12px;min-width:120px}
+.service i{font-family:"Cormorant Garamond",serif;font-size:26px;font-style:normal;width:55px;height:55px;border-radius:50%;display:grid;place-items:center;background:#edd2c3}
+.service span{font-size:10px;line-height:1.45}
+.gallery{text-align:center;padding:45px 9vw 65px;background:#faf5f0}
+.gallery h2{margin-bottom:32px}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:930px;margin:auto}
+.gallery-grid img{width:100%;height:290px;object-fit:cover;object-position:center;border-radius:0}
+.salon{display:grid;grid-template-columns:1.05fr .8fr 1fr;align-items:center;gap:50px;padding:52px 9vw;background:#ead8cc}
+.salon-copy h2{margin-bottom:20px}
+.salon-details>div{display:flex;gap:18px;margin:18px 0;align-items:flex-start}
+.salon-details b{font-size:22px;font-weight:400;width:25px;text-align:center}
+.salon-details span{font-size:10px;line-height:1.6}
+.salon-details .pill{margin-top:8px}
+.salon-photo{height:210px;overflow:hidden}
+.salon-photo img{width:100%;height:100%;object-fit:cover}
+.contact{background:var(--dark);color:#fff;text-align:center;padding:85px 7vw}
+.contact .kicker{color:#d6bba8}
+.contact h2{font-size:58px;margin-top:20px}
+.contact h2 em{font-style:italic}
+.contact p{margin:25px auto;color:#d9ccc5}
+.contact-buttons{display:flex;justify-content:center;gap:12px}
+.pill.dark{background:#e5b5a2;color:var(--brown)}
+.pill.outline{background:transparent;border-color:#fff;color:#fff}
+.handle{margin-top:25px;font-size:9px;letter-spacing:.2em}
+footer{min-height:110px;padding:28px 9vw;background:#332723;color:#d8c7be;display:grid;grid-template-columns:1fr 1fr 1fr;align-items:center}
+.footer-logo{font-family:"Cormorant Garamond",serif;font-size:28px;font-style:italic}
+.footer-logo small{display:block;font-family:Montserrat,sans-serif;font-style:normal;font-size:8px;letter-spacing:.13em;margin-top:5px}
+.footer-social{text-align:center;font-size:9px}
+.footer-links{justify-self:end;display:flex;gap:20px;align-items:center;font-size:8px}
+.footer-links span{font-size:20px}
+@media(max-width:900px){
+  .topbar{grid-template-columns:1fr auto;height:62px}.topbar nav{display:none}.social-top{display:none}
+  .about{grid-template-columns:1fr 1fr}.values{grid-column:1/-1;border-left:0;border-top:1px solid var(--line);padding:18px 0 0;display:grid;grid-template-columns:repeat(2,1fr)}
+  .service-row{flex-wrap:wrap;justify-content:center;gap:25px}.salon{grid-template-columns:1fr 1fr}.salon-photo{grid-column:1/-1}
+}
+@media(max-width:620px){
+  .hero-copy{left:8%;top:22%}.hero h1{font-size:63px}.hero-note{right:6%;bottom:13%;font-size:16px}
+  .about,.salon{grid-template-columns:1fr;padding:45px 7vw}.about-image{height:330px}.values{grid-template-columns:1fr 1fr}
+  .gallery{padding:45px 6vw}.gallery-grid{grid-template-columns:1fr 1fr}.gallery-grid img{height:245px}
+  .contact h2{font-size:47px}.contact-buttons{flex-direction:column;align-items:center}
+  footer{grid-template-columns:1fr;text-align:center;gap:20px}.footer-links{justify-self:center}
+}
